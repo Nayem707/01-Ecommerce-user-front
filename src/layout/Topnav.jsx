@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Topnav1 = () => {
+const Topnav = () => {
   return (
     <div className=' header top-0 bg-white shadow-md flex items-center justify-between px-5 '>
       <div className='nav font-semibold text-lg'>
@@ -81,4 +81,4 @@ const Topnav1 = () => {
   );
 };
 
-export default Topnav1;
+export default Topnav;
