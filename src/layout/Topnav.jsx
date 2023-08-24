@@ -61,9 +61,9 @@ const Topnav = () => {
       <div className=' border flex justify-center align-baseline bg-slate-200 rounded-full p-1 '>
         <ul className='flex text-center divide-x gap-2 divide-blue-800 px-5'>
           <li>
-            <Link className='' to='admin/dashboard'>
+            <a className='' href='#'>
               Admin
-            </Link>
+            </a>
           </li>
           <li>
             <Link className='p-2' to='/login'>

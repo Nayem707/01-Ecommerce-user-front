@@ -13,7 +13,6 @@ import Products from '../pages/Products/Products';
 import CartView from '../pages/cart/CartView';
 import SettingView from '../pages/setting/SettingView';
 import ProductDetails from '../components/products/ProductDetails';
-import Dashboard from '../views/Admin/Dashboard';
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,7 +24,6 @@ export const router = createBrowserRouter(
       <Route path='/products/:id' element={<ProductDetails />} />
       <Route path='/cart' element={<CartView />} />
       <Route path='/setting/user' element={<SettingView />} />
-      <Route path='/admin/dashboard' element={<Dashboard />} />
 
       <Route path='*' element={<ErrorView />} />
     </Route>

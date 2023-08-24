@@ -34,11 +34,7 @@ const Brand = () => {
                   Alt='Brand Image'
                   imgSrc='https://cdn.tailgrids.com/1.0/assets/images/brands/ayroui.svg'
                 />
-                <SingleImage
-                  href='#'
-                  Alt='Brand Image'
-                  imgSrc='https://cdn.tailgrids.com/1.0/assets/images/brands/uideck.svg'
-                />
+
                 <SingleImage
                   href='#'
                   Alt='Brand Image'
