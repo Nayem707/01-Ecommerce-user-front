@@ -1,6 +1,6 @@
 import React from 'react';
 
-const card3 = () => {
+const card3 = ({ item }) => {
   return (
     <div className=' flex flex-wrap items-center justify-center'>
       <div className='flex-shrink-0 m-6 relative overflow-hidden bg-orange-500 rounded-lg max-w-xs shadow-lg'>
@@ -40,7 +40,7 @@ const card3 = () => {
           <div className='flex justify-between'>
             <span className='block font-semibold text-xl'>blalala</span>
             <span className=' bg-white rounded-full text-orange-500 text-xs font-bold px-3 py-2 leading-none flex items-center'>
-              20
+              $20
             </span>
           </div>
         </div>
@@ -82,7 +82,7 @@ const card3 = () => {
           <div className='flex justify-between'>
             <span className='block font-semibold text-xl'>blalala</span>
             <span className=' bg-white rounded-full text-orange-500 text-xs font-bold px-3 py-2 leading-none flex items-center'>
-              20
+              $50
             </span>
           </div>
         </div>
@@ -124,7 +124,7 @@ const card3 = () => {
           <div className='flex justify-between'>
             <span className='block font-semibold text-xl'>blalala</span>
             <span className=' bg-white rounded-full text-orange-500 text-xs font-bold px-3 py-2 leading-none flex items-center'>
-              20
+              $20
             </span>
           </div>
         </div>

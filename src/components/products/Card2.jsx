@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Card2 = ({ item }) => {
   return (
     <>
-      <div className='grid grid-rows-4 grid-flow-col gap-4 max-w-md'>
+      <div className='grid grid-rows-3 grid-flow-col gap-4 max-w-md'>
         {item &&
           item.map((product) => {
             return (
@@ -40,14 +40,53 @@ const Card2 = ({ item }) => {
                     <p className='text-gray-400 font-light text-xs text-center'>
                       Hammond robotics
                     </p>
-                    <h1 className='text-gray-800 text-center mt-1'>
-                      Item name
-                    </h1>
+                    <Link to='/products/1'>
+                      <h1 className='text-gray-800 text-center mt-1 '>
+                        Product Info
+                      </h1>
+                    </Link>
                     <p className='text-center text-gray-800 mt-1'>
                       ${product.price}
                     </p>
+                    <div className='inline-flex items-center mt-2'>
+                      <button className='bg-white rounded-l border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200'>
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          className='h-6 w-4'
+                          fill='none'
+                          viewBox='0 0 24 24'
+                          stroke='currentColor'
+                        >
+                          <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth='2'
+                            d='M20 12H4'
+                          />
+                        </svg>
+                      </button>
+                      <div className='bg-gray-100 border-t border-b border-gray-100 text-gray-600 hover:bg-gray-100 inline-flex items-center px-4 py-1 select-none'>
+                        2
+                      </div>
+                      <button className='bg-white rounded-r border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200'>
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          className='h-6 w-4'
+                          fill='none'
+                          viewBox='0 0 24 24'
+                          stroke='currentColor'
+                        >
+                          <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth='2'
+                            d='M12 4v16m8-8H4'
+                          />
+                        </svg>
+                      </button>
+                    </div>
 
-                    <button className='py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50 mt-4 w-full flex items-center justify-center'>
+                    <button className='py-2 px-4  bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50 mt-4 w-full flex items-center justify-center'>
                       Add
                       <svg
                         xmlns='http://www.w3.org/2000/svg'

@@ -125,15 +125,8 @@ const ProductsView = () => {
                 })}
               </SliderCommon>
             </div>
-            <div className='px-10 text-3xl mb-5'>
-              <p className='text-2xl font-semibold leading-normal text-gray-800'>
-                Sprots
-              </p>
-              <p className='text-base leading-4 text-gray-600 mt-2'>
-                (09 products)
-              </p>
-            </div>
-            <div className=' flex flex-row items-center space-x-3 pt-5'>
+
+            <div className=' mx-auto flex items-center pt-5'>
               <Card2 item={product} />
             </div>
             <ProductCard3 item={product} />
