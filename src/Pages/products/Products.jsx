@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ProductsHeading from '../../components/products/ProductsHeading';
 import Card from '../../components/products/Card';
 import SliderCommon from '../../components/common/SliderCommon';
 import Filter1 from '../../components/products/Filter';
 import Card2 from '../../components/products/Card2';
 import ProductCard3 from '../../components/products/ProductCard3';
+import { fetchProductData } from '../../features/ProductsData/ProductDataSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 const products = [
   {
@@ -90,7 +92,15 @@ const products = [
   // More products...
 ];
 
-const Products = () => {
+const ProductsView = () => {
+  const product = useSelector((state) => state.product.data);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchProductData());
+  }, [dispatch]);
+
   return (
     <>
       <div className='bg-white relative '>
@@ -115,21 +125,18 @@ const Products = () => {
                 })}
               </SliderCommon>
             </div>
-
-            <div className=' flex flex-row items-center space-x-3 pt-5'>
-              <div className='px-10 text-3xl mb-5'>
-                <p className='text-2xl font-semibold leading-normal text-gray-800'>
-                  Sprots
-                </p>
-                <p className='text-base leading-4 text-gray-600 mt-2'>
-                  (09 products)
-                </p>
-              </div>
-              <Card2 />
-              <Card2 />
-              <Card2 />
+            <div className='px-10 text-3xl mb-5'>
+              <p className='text-2xl font-semibold leading-normal text-gray-800'>
+                Sprots
+              </p>
+              <p className='text-base leading-4 text-gray-600 mt-2'>
+                (09 products)
+              </p>
             </div>
-            <ProductCard3 />
+            <div className=' flex flex-row items-center space-x-3 pt-5'>
+              <Card2 item={product} />
+            </div>
+            <ProductCard3 item={product} />
           </div>
         </div>
       </div>
@@ -137,4 +144,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default ProductsView;
