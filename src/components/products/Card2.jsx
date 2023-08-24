@@ -1,22 +1,27 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Card2 = () => {
   return (
     <div className='py-6 cursor-pointer'>
       <div className='flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden'>
         <div className='w-1/3 justify-center items-center flex'>
-          <img
-            src='https://freepngimg.com/thumb/football/6-red-football-ball-png-image.png'
-            alt=''
-            className=' '
-          />
+          <Link to='/products/1'>
+            <img
+              src='https://freepngimg.com/thumb/football/6-red-football-ball-png-image.png'
+              alt=''
+              className=' '
+            />
+          </Link>
         </div>
         <div className='w-2/3 p-4'>
-          <h1 className='text-gray-900 font-bold text-2xl'>Ball</h1>
-          <p className='mt-2 text-gray-600 text-sm'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit In odit
-            exercitationem fuga id nam quia
-          </p>
+          <Link to='/products/1'>
+            <h1 className='text-gray-900 font-bold text-2xl'>Ball</h1>
+            <p className='mt-2 text-gray-600 text-sm'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit In odit
+              exercitationem fuga id nam quia
+            </p>
+          </Link>
           <div className='flex item-center mt-2'>
             <svg
               className='w-5 h-5 fill-current text-gray-700'

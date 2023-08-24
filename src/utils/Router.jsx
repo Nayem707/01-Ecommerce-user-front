@@ -12,8 +12,7 @@ import ErrorView from '../pages/error/ErrorView';
 import Products from '../pages/Products/Products';
 import CartView from '../pages/cart/CartView';
 import SettingView from '../pages/setting/SettingView';
-import ProductDetails from '../components/common/ProductDetails';
-import Cursole from '../components/common/Cursole';
+import ProductDetails from '../components/products/ProductDetails';
 import Dashboard from '../views/Admin/Dashboard';
 
 export const router = createBrowserRouter(
@@ -23,7 +22,6 @@ export const router = createBrowserRouter(
       <Route path='/login' element={<LoginView />} />
       <Route path='/register' element={<RegisterView />} />
       <Route path='/products' element={<Products />} />
-      <Route path='/cursole' element={<Cursole />} />
       <Route path='/products/:id' element={<ProductDetails />} />
       <Route path='/cart' element={<CartView />} />
       <Route path='/setting/user' element={<SettingView />} />

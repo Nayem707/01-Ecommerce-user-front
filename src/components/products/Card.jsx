@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const products = [
   {
@@ -59,19 +60,19 @@ const Card = ({ item }) => {
 
   return (
     <div className='max-w-sm m-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
-      <a href='#'>
+      <Link to='/products/1'>
         <img
           className='rounded-t-lg h-80 w-full object-cover'
           src={imageSrc}
           alt='product image'
         />
-      </a>
+      </Link>
       <div className='px-5 pb-5'>
-        <a href='#'>
+        <Link to='/products/1'>
           <h5 className='text-xl font-semibold tracking-tight text-gray-900 dark:text-white'>
             Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
           </h5>
-        </a>
+        </Link>
         <div className='flex items-center mt-2.5 mb-5'>
           <svg
             className='w-4 h-4 text-yellow-300 mr-1'
@@ -122,6 +123,7 @@ const Card = ({ item }) => {
             5.0
           </span>
         </div>
+
         <div className='flex items-center justify-between'>
           <span className='text-3xl font-bold text-gray-900 dark:text-white'>
             $599

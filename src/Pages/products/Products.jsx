@@ -1,9 +1,9 @@
 import React from 'react';
-import ProductsHeading from '../../components/common/ProductsHeading';
-import Card from '../../components/common/Card';
+import ProductsHeading from '../../components/products/ProductsHeading';
+import Card from '../../components/products/Card';
 import SliderCommon from '../../components/common/SliderCommon';
-import Filter1 from '../../components/common/Filter';
-import Card2 from '../../components/common/Card2';
+import Filter1 from '../../components/products/Filter';
+import Card2 from '../../components/products/Card2';
 import ProductCard3 from '../../components/products/ProductCard3';
 
 const products = [
@@ -95,7 +95,7 @@ const Products = () => {
     <>
       <div className='bg-white relative '>
         <div className=' col-span-2 flex '>
-          <div className='   p-2 pt-10 w-60 h-screen '>
+          <div className='p-2 pt-10 w-60 h-screen '>
             <Filter1 />
           </div>
           <div className='w-full pt-10 px-4 divide-y-2 divide-zinc-700'>

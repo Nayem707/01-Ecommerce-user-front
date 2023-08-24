@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const LoginView = () => {
   return (
-    <div className=' flex items-center justify-center'>
-      <div className='max-w-md w-full p-6 rounded-lg shadow-md'>
+    <div className=' flex items-center justify-center p-5'>
+      <div className='max-w-md w-full p-5 rounded-lg shadow-md'>
         <div className='flex justify-center mb-5'>
           <img
             src='https://getlogovector.com/wp-content/uploads/2021/05/yours-clothing-logo-vector.png'
