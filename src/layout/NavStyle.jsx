@@ -1,7 +1,10 @@
 import { Link, NavLink } from 'react-router-dom';
 import ModalView from '../components/common/Modal';
+import { useSelector } from 'react-redux';
 
 export default function NavStyle() {
+  const cartItem = useSelector((state) => state.cart);
+
   return (
     <>
       <header className='header sticky top-0 bg-white shadow-md flex items-center justify-between px-7 py-02'>
@@ -90,11 +93,12 @@ export default function NavStyle() {
               />
             </svg>
           </a>
+          <span className=' '>{cartItem.length}</span>
           <button>
             <ModalView />
           </button>
 
-          <NavLink to='/setting/user'>
+          <NavLink to='/setting/user' className='flex gap-5'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               fill='none'

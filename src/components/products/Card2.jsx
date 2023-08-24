@@ -1,7 +1,14 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { add } from '../../features/reduxCart/CartSlice';
 
 const Card2 = ({ item }) => {
+  const dispatch = useDispatch();
+  const addToCart = (product) => {
+    dispatch(add(product));
+  };
+
   return (
     <>
       <div className='grid grid-rows-3 grid-flow-col gap-4 max-w-md'>
@@ -86,7 +93,10 @@ const Card2 = ({ item }) => {
                       </button>
                     </div>
 
-                    <button className='py-2 px-4  bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50 mt-4 w-full flex items-center justify-center'>
+                    <button
+                      onClick={() => addToCart(product)}
+                      className='py-2 px-4  bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50 mt-4 w-full flex items-center justify-center'
+                    >
                       Add
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
