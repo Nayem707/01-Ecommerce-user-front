@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.4.0",
     "infinite-react-carousel": "^1.2.11",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

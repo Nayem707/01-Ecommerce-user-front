@@ -1,4 +1,5 @@
 import React from 'react';
+import RTKDataComponent from '../../components/cart/TestingCart';
 
 const SettingView = () => {
   return (
@@ -245,6 +246,7 @@ const SettingView = () => {
           </div>
         </div>
       </div>
+      <RTKDataComponent />
     </section>
   );
 };

@@ -79,53 +79,42 @@ const CartLeft = () => {
                   <p className='mt-1 text-sm text-gray-500'>{product.color}</p>
                 </div>
                 <div className='flex flex-1 items-end justify-between text-sm '>
-                  <div className=''>
-                    <label className='sr-only'>Quantity</label>
-
-                    <div className='flex items-center gap-1'>
-                      <button
-                        type='button'
-                        className='w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75'
+                  <div className='inline-flex items-center mt-2'>
+                    <button className='bg-white rounded-l border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200'>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        className='h-6 w-4'
+                        fill='none'
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'
                       >
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          viewBox='0 0 24 24'
-                          fill='currentColor'
-                          className='w-7 h-7'
-                        >
-                          <path
-                            fillRule='evenodd'
-                            d='M3.75 12a.75.75 0 01.75-.75h15a.75.75 0 010 1.5h-15a.75.75 0 01-.75-.75z'
-                            clipRule='evenodd'
-                          />
-                        </svg>
-                      </button>
-
-                      <input
-                        type='number'
-                        id='Quantity'
-                        value='1'
-                        className='h-10 w-16 rounded border-gray-200 text-center [-moz-appearance:_textfield] sm:text-sm [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none'
-                      />
-
-                      <button
-                        type='button'
-                        className='w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75'
-                      >
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          viewBox='0 0 24 24'
-                          fill='currentColor'
-                          className='w-6 h-6'
-                        >
-                          <path
-                            fillRule='evenodd'
-                            d='M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z'
-                            clipRule='evenodd'
-                          />
-                        </svg>
-                      </button>
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          strokeWidth='2'
+                          d='M20 12H4'
+                        />
+                      </svg>
+                    </button>
+                    <div className='bg-gray-100 border-t border-b border-gray-100 text-gray-600 hover:bg-gray-100 inline-flex items-center px-4 py-1 select-none'>
+                      2
                     </div>
+                    <button className='bg-white rounded-r border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200'>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        className='h-6 w-4'
+                        fill='none'
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'
+                      >
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          strokeWidth='2'
+                          d='M12 4v16m8-8H4'
+                        />
+                      </svg>
+                    </button>
                   </div>
 
                   <div className='flex'>
