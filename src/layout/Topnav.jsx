@@ -61,7 +61,7 @@ const Topnav = () => {
       <div className=' border flex justify-center align-baseline bg-slate-200 rounded-full p-1 '>
         <ul className='flex text-center divide-x gap-2 divide-blue-800 px-5'>
           <li>
-            <a className='' href='#'>
+            <a className='' href='https://ecommerc-490-admin.netlify.app'>
               Admin
             </a>
           </li>

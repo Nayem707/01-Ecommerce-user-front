@@ -94,7 +94,7 @@ const products = [
 
 const ProductsView = () => {
   const product = useSelector((state) => state.product.data);
-
+  console.log(product);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -129,7 +129,7 @@ const ProductsView = () => {
             <div className=' mx-auto flex items-center pt-5'>
               <Card2 item={product} />
             </div>
-            <ProductCard3 item={product} />
+            <ProductCard3 item={product} loading />
           </div>
         </div>
       </div>
