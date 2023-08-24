@@ -16,7 +16,7 @@ const CartLeft = () => {
     <li key={product.id} className='flex py-6'>
       <div className='h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200'>
         <img
-          src='productimageSrc'
+          src='https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg'
           className='h-full w-full object-cover object-center'
         />
       </div>

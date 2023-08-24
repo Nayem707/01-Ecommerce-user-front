@@ -27,10 +27,15 @@
 
 ```js
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.4.0",
+    "infinite-react-carousel": "^1.2.11",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.1.2",
     "react-router-dom": "^6.14.2",
     "sort-by": "^1.2.0"
   },
@@ -55,3 +60,7 @@
     "vite": "^4.4.5"
   }
 ```
+
+### Project Link
+
+<a href="https://ecommerce-490-users.netlify.app/" target="_blank">Visit</a>

@@ -129,7 +129,7 @@ const ProductsView = () => {
             <div className=' mx-auto flex items-center pt-5'>
               <Card2 item={product} />
             </div>
-            <ProductCard3 item={product} loading />
+            <ProductCard3 item={product} />
           </div>
         </div>
       </div>
