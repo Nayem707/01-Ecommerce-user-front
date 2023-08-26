@@ -3,7 +3,7 @@ import { getCartItems } from './cartURL';
 
 const initialState = {
   cartItems: [],
-  amount: 0,
+  amount: 4,
   total: 0,
   isLoading: false,
   error: null,
@@ -41,21 +41,21 @@ const cartSlice = createSlice({
       state.amount = amount;
       state.total = total;
     },
-    extraReducers: (bulder) => {
-      bulder.addCase(getCartItems.pending, (state) => {
-        state.isLoading = true;
-      });
-      bulder.addCase(getCartItems.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.cartItems = action.payload;
-        state.error = null;
-      });
-      bulder.addCase(getCartItems.rejected, (state, action) => {
-        state.isLoading = false;
-        state.cartItems = [];
-        state.error = action.error.message;
-      });
-    },
+  },
+  extraReducers: (bulder) => {
+    bulder.addCase(getCartItems.pending, (state) => {
+      state.isLoading = true;
+    });
+    bulder.addCase(getCartItems.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.cartItems = action.payload;
+      state.error = null;
+    });
+    bulder.addCase(getCartItems.rejected, (state, action) => {
+      state.isLoading = false;
+      state.cartItems = [];
+      state.error = action.error.message;
+    });
   },
 });
 export const {

@@ -2,8 +2,11 @@ import { Link, NavLink } from 'react-router-dom';
 import ModalView from '../components/common/Modal';
 import { useSelector } from 'react-redux';
 
+import { useState } from 'react';
+
 export default function NavStyle() {
-  const cartItem = useSelector((state) => state.cart);
+  const [open, setOpen] = useState(false);
+  const { amount } = useSelector((store) => store.cart);
 
   return (
     <>
@@ -27,7 +30,7 @@ export default function NavStyle() {
               <Link to='/products'>Products</Link>
             </li>
             <li className='p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer'>
-              <Link to='/cart'>Collections</Link>
+              <Link to='/cart'>Collection</Link>
             </li>
             <li className='p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer'>
               <Link to='/contact'>Contact</Link>
@@ -77,14 +80,14 @@ export default function NavStyle() {
         </div>
         {/* Search BOX-end */}
         <div className='w-3/12 flex justify-end gap-4'>
-          <a href='notifications'>
+          <NavLink href='notifications'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
               viewBox='0 0 24 24'
               strokeWidth={1.5}
               stroke='currentColor'
-              className='w-6 h-6'
+              className='w-7 h-7'
             >
               <path
                 strokeLinecap='round'
@@ -92,12 +95,37 @@ export default function NavStyle() {
                 d='M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0'
               />
             </svg>
-          </a>
-          <span className=' '>{cartItem.length}</span>
-          <span>
-            <ModalView />
-          </span>
+          </NavLink>
 
+          <div className=''>
+            <div
+              className='relative cursor-pointer'
+              onClick={() => setOpen(!open)}
+            >
+              {/* Cart Button */}
+              <div className='t-0  left-4 absolute '>
+                <p className='flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-3 text-xs text-white'>
+                  {amount}
+                </p>
+              </div>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                strokeWidth={1.5}
+                stroke='currentColor'
+                className='w-7 h-7'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  d='M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z'
+                />
+              </svg>
+            </div>
+            {open && <ModalView setOpen={setOpen} open={open} />}
+          </div>
+          {/* Cart Button-end */}
           <NavLink to='/setting/user' className='flex gap-5'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -105,7 +133,7 @@ export default function NavStyle() {
               viewBox='0 0 24 24'
               strokeWidth={1.5}
               stroke='currentColor'
-              className='w-6 h-6'
+              className='w-7 h-7'
             >
               <path
                 strokeLinecap='round'
