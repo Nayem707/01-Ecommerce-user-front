@@ -8,10 +8,10 @@ const PageHeading1 = () => {
           <div className='flex flex-col justify-start items-start'>
             <div className=' flex flex-row justify-end items-center space-x-3'>
               <p className='text-2xl font-semibold leading-normal text-gray-800'>
-                Watches
+                Mobile
               </p>
               <p className='text-base leading-4 text-gray-600 mt-2'>
-                (09 products)
+                ( 04 products )
               </p>
             </div>
           </div>

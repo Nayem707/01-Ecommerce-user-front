@@ -3,21 +3,23 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { add } from '../../features/Cart/CartSlice';
 
-const Card2 = ({ id, img, price, amount }) => {
+const Card2 = ({ id, img, price, title }) => {
   const dispatch = useDispatch();
 
   return (
     <>
-      <section className=' mx-auto flex items-center pt-5'>
+      <section className=''>
         <div className=' bg-white shadow rounded'>
           <div className='  bg-gray-200 flex flex-col justify-center p-4 bg-cover bg-center'>
             <div>
-              <img src={img} alt='..' className='img h-24' />
+              <Link to='/products/1'>
+                <img src={img} alt='..' className='img h-64' />
+              </Link>
             </div>
           </div>
           <div className='p-4 flex flex-col items-center'>
             <Link to='/products/1'>
-              <h1 className='text-gray-800 text-center mt-1 '>Product Info</h1>
+              <h1 className='text-gray-800 text-center mt-1 '>{title}</h1>
             </Link>
             <p className='text-center text-gray-800 mt-1'>${price}</p>
 

@@ -44,8 +44,8 @@ const Topnav = () => {
               inaeem707@gmail.com
             </a>
           </li>
-          <div className='flex items-center bg-gray-800 rounded-full px-5'>
-            <p className='px-1 opacity-75 text-zinc-50'>
+          <div className='flex items-center  rounded-full px-5'>
+            <p className=' border rounded-full px-5 text-black'>
               25% off Lorem ipsum dolor{' '}
               <a
                 href='#'

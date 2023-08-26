@@ -18,15 +18,18 @@ const CartContainer = () => {
     );
   }
 
+  if (isLoading) {
+    return (
+      <h2 className=' mx-auto items-center justify-center text-center p-5 text-2xl'>
+        Loading...
+      </h2>
+    );
+  }
+
   return (
     <div className='mt-5 '>
       <div className='flow-root'>
         <ul role='list' className='-my-6 divide-y mb-2 divide-gray-200'>
-          {isLoading && (
-            <h2 className=' mx-auto items-center justify-center text-center p-5 text-2xl'>
-              Loading...
-            </h2>
-          )}
           {cartItems.map((item) => (
             <CartItem key={item.id} {...item} />
           ))}

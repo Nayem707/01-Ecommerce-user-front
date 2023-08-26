@@ -27,7 +27,7 @@ const CartItem = ({ id, title, price, img, amount }) => {
                 {
                   amount === 1 && dispatch(removeItem(id));
                 }
-                dispatch(decrease({ id }));
+                dispatch(decrease(id));
               }}
               className='bg-white rounded-l border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200'
             >
@@ -39,7 +39,7 @@ const CartItem = ({ id, title, price, img, amount }) => {
             </div>
 
             <button
-              onClick={() => dispatch(increase({ id }))}
+              onClick={() => dispatch(increase(id))}
               className='bg-white rounded-r border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200'
             >
               +

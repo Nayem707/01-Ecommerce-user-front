@@ -1,8 +1,8 @@
 import { Link, NavLink } from 'react-router-dom';
 import ModalView from '../components/common/Modal';
-import { useSelector } from 'react-redux';
 
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 export default function NavStyle() {
   const [open, setOpen] = useState(false);
@@ -11,7 +11,7 @@ export default function NavStyle() {
   return (
     <>
       <header className='header sticky top-0 bg-white shadow-md flex items-center justify-between px-7 py-02'>
-        <h1 className='w-3/12'>
+        <h1 className='w-3/11'>
           <Link to='/'>
             <img
               src='https://getlogovector.com/wp-content/uploads/2021/05/yours-clothing-logo-vector.png'
