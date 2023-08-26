@@ -34,7 +34,7 @@ export default function NavStyle() {
             </li>
           </ul>
         </nav>
-
+        {/* Search BOX */}
         <div className='box'>
           <div className='box-wrapper'>
             <div className=' bg-white rounded flex items-center w-full p-3 shadow-sm border border-gray-200'>
@@ -75,7 +75,7 @@ export default function NavStyle() {
             </div>
           </div>
         </div>
-
+        {/* Search BOX-end */}
         <div className='w-3/12 flex justify-end gap-4'>
           <a href='notifications'>
             <svg
@@ -94,9 +94,9 @@ export default function NavStyle() {
             </svg>
           </a>
           <span className=' '>{cartItem.length}</span>
-          <button>
+          <span>
             <ModalView />
-          </button>
+          </span>
 
           <NavLink to='/setting/user' className='flex gap-5'>
             <svg

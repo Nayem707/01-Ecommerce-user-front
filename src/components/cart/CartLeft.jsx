@@ -2,15 +2,15 @@ import React from 'react';
 import CartModal from './CartModal';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { remove } from '../../features/reduxCart/CartSlice';
+// import { remove } from '../../features/reduxCart/CartSlice';
 
 const CartLeft = () => {
-  const cartItem = useSelector((state) => state.cart);
+  const cartItem = useSelector((state) => state);
 
-  const dispatch = useDispatch();
-  const removeToCart = (id) => {
-    dispatch(remove(id));
-  };
+  // const dispatch = useDispatch();
+  // const removeToCart = (id) => {
+  //   dispatch(remove(id));
+  // };
 
   const displayCartItem = cartItem.map((product) => (
     <li key={product.id} className='flex py-6'>

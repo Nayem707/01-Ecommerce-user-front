@@ -1,5 +1,4 @@
 import React from 'react';
-import RTKDataComponent from '../../components/cart/TestingCart';
 
 const SettingView = () => {
   return (
@@ -17,7 +16,7 @@ const SettingView = () => {
                 <div className='lg:col-span-2'>
                   <div className='grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5'>
                     <div className='md:col-span-5'>
-                      <label for='full_name'>Full Name</label>
+                      <label htmlFor='full_name'>Full Name</label>
                       <input
                         type='text'
                         name='full_name'
@@ -28,7 +27,7 @@ const SettingView = () => {
                     </div>
 
                     <div className='md:col-span-5'>
-                      <label for='email'>Email Address</label>
+                      <label htmlFor='email'>Email Address</label>
                       <input
                         type='text'
                         name='email'
@@ -40,7 +39,7 @@ const SettingView = () => {
                     </div>
 
                     <div className='md:col-span-3'>
-                      <label for='address'>Address / Street</label>
+                      <label htmlFor='address'>Address / Street</label>
                       <input
                         type='text'
                         name='address'
@@ -52,7 +51,7 @@ const SettingView = () => {
                     </div>
 
                     <div className='md:col-span-2'>
-                      <label for='city'>City</label>
+                      <label htmlFor='city'>City</label>
                       <input
                         type='text'
                         name='city'
@@ -64,7 +63,7 @@ const SettingView = () => {
                     </div>
 
                     <div className='md:col-span-2'>
-                      <label for='country'>Country / region</label>
+                      <label htmlFor='country'>Country / region</label>
                       <div className='h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1'>
                         <input
                           name='country'
@@ -74,7 +73,7 @@ const SettingView = () => {
                           value=''
                         />
                         <button
-                          tabindex='-1'
+                          tabIndex='-1'
                           className='cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-red-600'
                         >
                           <svg
@@ -82,17 +81,17 @@ const SettingView = () => {
                             xmlns='http://www.w3.org/2000/svg'
                             viewBox='0 0 24 24'
                             stroke='currentColor'
-                            stroke-width='2'
-                            stroke-linecap='round'
-                            stroke-linejoin='round'
+                            strokeWidth='2'
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
                           >
                             <line x1='18' y1='6' x2='6' y2='18'></line>
                             <line x1='6' y1='6' x2='18' y2='18'></line>
                           </svg>
                         </button>
                         <button
-                          tabindex='-1'
-                          for='show_more'
+                          tabIndex='-1'
+                          htmlFor='show_more'
                           className='cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600'
                         >
                           <svg
@@ -100,9 +99,9 @@ const SettingView = () => {
                             xmlns='http://www.w3.org/2000/svg'
                             viewBox='0 0 24 24'
                             stroke='currentColor'
-                            stroke-width='2'
-                            stroke-linecap='round'
-                            stroke-linejoin='round'
+                            strokeWidth='2'
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
                           >
                             <polyline points='18 15 12 9 6 15'></polyline>
                           </svg>
@@ -111,7 +110,7 @@ const SettingView = () => {
                     </div>
 
                     <div className='md:col-span-2'>
-                      <label for='state'>State / province</label>
+                      <label htmlFor='state'>State / province</label>
                       <div className='h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1'>
                         <input
                           name='state'
@@ -121,7 +120,7 @@ const SettingView = () => {
                           value=''
                         />
                         <button
-                          tabindex='-1'
+                          tabIndex='-1'
                           className='cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-red-600'
                         >
                           <svg
@@ -129,17 +128,17 @@ const SettingView = () => {
                             xmlns='http://www.w3.org/2000/svg'
                             viewBox='0 0 24 24'
                             stroke='currentColor'
-                            stroke-width='2'
-                            stroke-linecap='round'
-                            stroke-linejoin='round'
+                            strokeWidth='2'
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
                           >
                             <line x1='18' y1='6' x2='6' y2='18'></line>
                             <line x1='6' y1='6' x2='18' y2='18'></line>
                           </svg>
                         </button>
                         <button
-                          tabindex='-1'
-                          for='show_more'
+                          tabIndex='-1'
+                          htmlFor='show_more'
                           className='cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600'
                         >
                           <svg
@@ -147,9 +146,9 @@ const SettingView = () => {
                             xmlns='http://www.w3.org/2000/svg'
                             viewBox='0 0 24 24'
                             stroke='currentColor'
-                            stroke-width='2'
-                            stroke-linecap='round'
-                            stroke-linejoin='round'
+                            strokeWidth='2'
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
                           >
                             <polyline points='18 15 12 9 6 15'></polyline>
                           </svg>
@@ -158,7 +157,7 @@ const SettingView = () => {
                     </div>
 
                     <div className='md:col-span-1'>
-                      <label for='zipcode'>Zipcode</label>
+                      <label htmlFor='zipcode'>Zipcode</label>
                       <input
                         type='text'
                         name='zipcode'
@@ -177,18 +176,18 @@ const SettingView = () => {
                           id='billing_same'
                           className='form-checkbox'
                         />
-                        <label for='billing_same' className='ml-2'>
+                        <label htmlFor='billing_same' className='ml-2'>
                           My billing address is different than above.
                         </label>
                       </div>
                     </div>
 
                     <div className='md:col-span-2'>
-                      <label for='soda'>How many soda pops?</label>
+                      <label htmlFor='soda'>How many soda pops?</label>
                       <div className='h-10 w-28 bg-gray-50 flex border border-gray-200 rounded items-center mt-1'>
                         <button
-                          tabindex='-1'
-                          for='show_more'
+                          tabIndex='-1'
+                          htmlFor='show_more'
                           className='cursor-pointer outline-none focus:outline-none border-r border-gray-200 transition-all text-gray-500 hover:text-blue-600'
                         >
                           <svg
@@ -198,9 +197,9 @@ const SettingView = () => {
                             fill='currentColor'
                           >
                             <path
-                              fill-rule='evenodd'
+                              fillRule='evenodd'
                               d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'
-                              clip-rule='evenodd'
+                              clipRule='evenodd'
                             />
                           </svg>
                         </button>
@@ -212,8 +211,8 @@ const SettingView = () => {
                           value='0'
                         />
                         <button
-                          tabindex='-1'
-                          for='show_more'
+                          tabIndex='-1'
+                          htmlFor='show_more'
                           className='cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-500 hover:text-blue-600'
                         >
                           <svg
@@ -223,9 +222,9 @@ const SettingView = () => {
                             fill='currentColor'
                           >
                             <path
-                              fill-rule='evenodd'
+                              fillRule='evenodd'
                               d='M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z'
-                              clip-rule='evenodd'
+                              clipRule='evenodd'
                             />
                           </svg>
                         </button>
@@ -246,7 +245,6 @@ const SettingView = () => {
           </div>
         </div>
       </div>
-      <RTKDataComponent />
     </section>
   );
 };
