@@ -8,8 +8,97 @@ export default function ModalView({ setOpen, open }) {
   const { cartItems, total, isLoading, amount } = useSelector(
     (store) => store.cart
   );
-
   const dispatch = useDispatch();
+
+  if (amount < 1) {
+    return (
+      <>
+        <Transition.Root show={open} as={Fragment}>
+          <Dialog as='div' className='relative z-10' onClose={setOpen}>
+            <Transition.Child
+              as={Fragment}
+              enter='ease-in-out duration-500'
+              enterFrom='opacity-0'
+              enterTo='opacity-100'
+              leave='ease-in-out duration-500'
+              leaveFrom='opacity-100'
+              leaveTo='opacity-0'
+            >
+              <div className='fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity' />
+            </Transition.Child>
+
+            <div className='fixed inset-0 overflow-hidden'>
+              <div className='absolute inset-0 overflow-hidden'>
+                <div className='pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10'>
+                  <Transition.Child
+                    as={Fragment}
+                    enter='transform transition ease-in-out duration-500 sm:duration-700'
+                    enterFrom='translate-x-full'
+                    enterTo='translate-x-0'
+                    leave='transform transition ease-in-out duration-500 sm:duration-700'
+                    leaveFrom='translate-x-0'
+                    leaveTo='translate-x-full'
+                  >
+                    <div className='pointer-events-auto w-screen max-w-md'>
+                      <div className='flex h-full flex-col overflow-y-scroll bg-white shadow-xl'>
+                        <div className='flex-1 overflow-y-auto px-4 py-6 sm:px-6'>
+                          <div className='flex items-start justify-between'>
+                            <h2 className='text-lg font-medium text-gray-900'>
+                              Shopping cart
+                            </h2>
+                            <div className='ml-3 flex h-7 items-center border-none'>
+                              <button
+                                type='button'
+                                className='relative -m-2 p-2 text-gray-400  '
+                                onClick={() => setOpen(false)}
+                              >
+                                <svg
+                                  xmlns='http://www.w3.org/2000/svg'
+                                  fill='none'
+                                  viewBox='0 0 24 24'
+                                  strokeWidth={1.5}
+                                  stroke='currentColor'
+                                  className='w-6 h-6'
+                                >
+                                  <path
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    d='M6 18L18 6M6 6l12 12'
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div className=' mx-auto mb-56'>
+                          <div className='  font-medium text-gray-900'>
+                            <h3>Your bag is Emty!</h3>
+                          </div>
+                        </div>
+                        <div className='border-t border-gray-200 px-4 py-6 sm:px-6'>
+                          <div className=' flex justify-center text-center text-sm text-gray-500'>
+                            <Link
+                              to='/products'
+                              type='button'
+                              className='font-medium text-indigo-600 hover:text-indigo-500'
+                              onClick={() => setOpen(false)}
+                            >
+                              Continue Shopping
+                              <span aria-hidden='true'> &rarr;</span>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Transition.Child>
+                </div>
+              </div>
+            </div>
+          </Dialog>
+        </Transition.Root>
+      </>
+    );
+  }
 
   return (
     <>
@@ -76,17 +165,17 @@ export default function ModalView({ setOpen, open }) {
                               role='list'
                               className='-my-6 divide-y divide-gray-200'
                             >
-                              {amount < 1 && (
+                              {isLoading && (
+                                <h2 className=' mx-auto items-center justify-center text-center p-5 text-2xl'>
+                                  Loading...
+                                </h2>
+                              )}
+                              {!amount < 1 && (
                                 <div>
                                   <div className='flex justify-center text-base font-medium text-gray-900'>
                                     <h3>Your bag is Emty</h3>
                                   </div>
                                 </div>
-                              )}
-                              {isLoading && (
-                                <h2 className=' mx-auto items-center justify-center text-center p-5 text-2xl'>
-                                  Loading...
-                                </h2>
                               )}
                               {cartItems.map((items) => {
                                 return (
@@ -111,12 +200,11 @@ export default function ModalView({ setOpen, open }) {
                                         <div className='inline-flex items-center mt-2'>
                                           <button
                                             onClick={() => {
-                                              {
-                                                items.amount === 1 &&
-                                                  dispatch(
-                                                    removeItem(items.id)
-                                                  );
+                                              if (items.amount === 1) {
+                                                dispatch(removeItem(items.id));
+                                                return;
                                               }
+
                                               dispatch(decrease(items.id));
                                             }}
                                             className='bg-white rounded-l border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200'
@@ -173,7 +261,7 @@ export default function ModalView({ setOpen, open }) {
                       <div className='border-t border-gray-200 px-4 py-6 sm:px-6'>
                         <div className='flex justify-between text-base font-medium text-gray-900'>
                           <p>Subtotal</p>
-                          <p>${total}</p>
+                          <p>${total.toFixed(2)}</p>
                         </div>
                         <p className='mt-0.5 text-sm text-gray-500'>
                           Shipping and taxes calculated at checkout.
