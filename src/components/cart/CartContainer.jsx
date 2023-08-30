@@ -10,9 +10,9 @@ const CartContainer = () => {
 
   if (amount < 1) {
     return (
-      <div>
-        <div className='flex justify-center text-base font-medium text-gray-900'>
-          <h3>Your bag is Emty</h3>
+      <div className=' p-10'>
+        <div className='flex justify-center text-base font-medium text-gray-900 p-5'>
+          <h3>Your Collection is Currently Emty!</h3>
         </div>
       </div>
     );

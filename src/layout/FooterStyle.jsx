@@ -8,7 +8,7 @@ const FooterStyle = () => {
         <div className='flex justify-center text-teal-600 dark:text-teal-300'>
           <Link to='/'>
             <img
-              src='/public/assets/shop-logo.png'
+              src='/src/assets/shop-logo.png'
               alt=''
               className='h-10 rounded-full'
             />

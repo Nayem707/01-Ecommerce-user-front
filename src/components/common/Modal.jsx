@@ -44,7 +44,7 @@ export default function ModalView({ setOpen, open }) {
                         <div className='flex-1 overflow-y-auto px-4 py-6 sm:px-6'>
                           <div className='flex items-start justify-between'>
                             <h2 className='text-lg font-medium text-gray-900'>
-                              Shopping cart
+                              Shopping Cart
                             </h2>
                             <div className='ml-3 flex h-7 items-center border-none'>
                               <button
@@ -72,7 +72,7 @@ export default function ModalView({ setOpen, open }) {
                         </div>
                         <div className=' mx-auto mb-56'>
                           <div className='  font-medium text-gray-900'>
-                            <h3>Your bag is Emty!</h3>
+                            <h3>Your Cart is Emty!</h3>
                           </div>
                         </div>
                         <div className='border-t border-gray-200 px-4 py-6 sm:px-6'>
