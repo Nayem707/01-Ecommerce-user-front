@@ -13,11 +13,7 @@ export default function NavStyle() {
       <header className='header sticky top-0 bg-white shadow-md flex items-center justify-between px-7 py-02'>
         <h1 className='w-3/11'>
           <Link to='/'>
-            <img
-              src='https://getlogovector.com/wp-content/uploads/2021/05/yours-clothing-logo-vector.png'
-              alt=''
-              className='h-20'
-            />
+            <img src='/public/assets/shop-logo.png' alt='' className='h-10' />
           </Link>
         </h1>
 
@@ -61,11 +57,11 @@ export default function NavStyle() {
                 placeholder='search for Products'
                 className='w-full pl-4 text-sm outline-none focus:outline-none bg-transparent'
               />
-              <div className='select'>
+              <div className='select '>
                 <select
                   name=''
                   id=''
-                  className='text-sm outline-none focus:outline-none bg-transparent'
+                  className='cursor-pointer text-sm outline-none focus:outline-none bg-transparent'
                 >
                   <option value='all' selected>
                     All

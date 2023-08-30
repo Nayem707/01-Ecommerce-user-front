@@ -85,7 +85,7 @@ export default function CheckoutForm() {
           Customer information
         </p>
         <div className=''>
-          <label className='block text-sm text-gray-00' for='cus_name'>
+          <label className='block text-sm text-gray-00' htmlFor='cus_name'>
             Name
           </label>
           <input
@@ -99,7 +99,7 @@ export default function CheckoutForm() {
           />
         </div>
         <div className='mt-2'>
-          <label className='block text-sm text-gray-600' for='cus_email'>
+          <label className='block text-sm text-gray-600' htmlFor='cus_email'>
             Email
           </label>
           <input
@@ -113,7 +113,7 @@ export default function CheckoutForm() {
           />
         </div>
         <div className='mt-2'>
-          <label className=' block text-sm text-gray-600' for='cus_email'>
+          <label className=' block text-sm text-gray-600' htmlFor='cus_email'>
             Address
           </label>
           <input
@@ -127,7 +127,7 @@ export default function CheckoutForm() {
           />
         </div>
         <div className='mt-2'>
-          <label className='hidden text-sm block text-gray-600' for='cus_email'>
+          <label className=' text-sm block text-gray-600' htmlFor='cus_email'>
             City
           </label>
           <input
@@ -141,7 +141,7 @@ export default function CheckoutForm() {
           />
         </div>
         <div className='inline-block mt-2 w-1/2 pr-1'>
-          <label className='hidden block text-sm text-gray-600' for='cus_email'>
+          <label className=' block text-sm text-gray-600' htmlFor='cus_email'>
             Country
           </label>
           <input
@@ -155,7 +155,7 @@ export default function CheckoutForm() {
           />
         </div>
         <div className='inline-block mt-2 -mx-1 pl-1 w-1/2'>
-          <label className='hidden block text-sm text-gray-600' for='cus_email'>
+          <label className='block text-sm text-gray-600' htmlFor='cus_email'>
             Zip
           </label>
           <input
@@ -170,7 +170,7 @@ export default function CheckoutForm() {
         </div>
         <p className='mt-4 text-gray-800 font-medium'>Payment information</p>
         <div className=''>
-          <label className='block text-sm text-gray-600' for='cus_name'>
+          <label className='block text-sm text-gray-600' htmlFor='cus_name'>
             Card
           </label>
           <input

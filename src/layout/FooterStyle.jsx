@@ -8,9 +8,9 @@ const FooterStyle = () => {
         <div className='flex justify-center text-teal-600 dark:text-teal-300'>
           <Link to='/'>
             <img
-              src='https://getlogovector.com/wp-content/uploads/2021/05/yours-clothing-logo-vector.png'
+              src='/public/assets/shop-logo.png'
               alt=''
-              className='h-20 rounded-full'
+              className='h-10 rounded-full'
             />
           </Link>
         </div>

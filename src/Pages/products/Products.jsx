@@ -4,8 +4,7 @@ import { useSelector } from 'react-redux';
 import Card2 from '../../components/products/Card2';
 
 const ProductsView = () => {
-  const { cartItems, isLoading } = useSelector((store) => store.cart);
-
+  const { products, isLoading } = useSelector((store) => store.products);
   return (
     <div className='bg-white  '>
       <div className=' col-span-2 flex '>
@@ -22,8 +21,8 @@ const ProductsView = () => {
               </h2>
             )}
 
-            {cartItems.map((item) => {
-              return <Card2 key={item.id} {...item} />;
+            {products.map((item) => {
+              return <Card2 key={item.id} item={item} />;
             })}
           </div>
         </div>

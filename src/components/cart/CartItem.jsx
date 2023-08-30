@@ -1,6 +1,8 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { decrease, increase, removeItem } from '../../features/Cart/CartSlice';
 import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 
 const CartItem = ({ id, title, price, img, amount }) => {
   const dispatch = useDispatch();
@@ -24,8 +26,10 @@ const CartItem = ({ id, title, price, img, amount }) => {
           <div className='inline-flex items-center mt-2'>
             <button
               onClick={() => {
-                {
-                  amount === 1 && dispatch(removeItem(id));
+                if (amount === 1) {
+                  dispatch(removeItem(id));
+                  // toast('Item Remove!');
+                  return;
                 }
                 dispatch(decrease(id));
               }}

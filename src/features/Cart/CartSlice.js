@@ -1,20 +1,21 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getCartItems } from './cartURL';
+import { toast } from 'react-toastify';
 
 const initialState = {
   cartItems: [],
-  amount: 4,
+  amount: 0,
   total: 0,
-  isLoading: false,
-  error: null,
 };
 
 const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    add(state, action) {
-      state.push(action.payload);
+    addToCart: (state, action) => {
+      const productToAdd = action.payload;
+      state.cartItems.push(productToAdd);
+      toast('Item Added!');
+      // localStorage.setItem('cart', JSON.stringify(state));
     },
     clearCart: (state) => {
       state.cartItems = [];
@@ -22,17 +23,21 @@ const cartSlice = createSlice({
     removeItem: (state, action) => {
       const itemId = action.payload;
       state.cartItems = state.cartItems.filter((item) => item.id !== itemId);
+      toast('Item remove!');
     },
+
     increase: (state, action) => {
       const itemId = action.payload;
       const cartItem = state.cartItems.find((item) => item.id === itemId);
       cartItem.amount = cartItem.amount + 1;
     },
+
     decrease: (state, action) => {
       const itemId = action.payload;
       const cartItem = state.cartItems.find((item) => item.id === itemId);
-      cartItem.amount = cartItem.amount + 1;
+      cartItem.amount = cartItem.amount - 1;
     },
+
     calculateTotals: (state) => {
       let amount = 0;
       let total = 0;
@@ -44,24 +49,9 @@ const cartSlice = createSlice({
       state.total = total;
     },
   },
-  extraReducers: (bulder) => {
-    bulder.addCase(getCartItems.pending, (state) => {
-      state.isLoading = true;
-    });
-    bulder.addCase(getCartItems.fulfilled, (state, action) => {
-      state.isLoading = false;
-      state.cartItems = action.payload;
-      state.error = null;
-    });
-    bulder.addCase(getCartItems.rejected, (state, action) => {
-      state.isLoading = false;
-      state.cartItems = [];
-      state.error = action.error.message;
-    });
-  },
 });
 export const {
-  add,
+  addToCart,
   remove,
   clearCart,
   removeItem,

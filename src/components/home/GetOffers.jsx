@@ -32,7 +32,7 @@ const GetOffers = () => {
       <img
         alt='Trainer'
         src='https://electbox-codezeel.myshopify.com/cdn/shop/articles/blog-3_1400x949.jpg?v=1654331283'
-        className='object-cover md:h-full rounded-md'
+        className='object-cover md:h-full rounded-md cursor-pointer'
       />
     </section>
   );

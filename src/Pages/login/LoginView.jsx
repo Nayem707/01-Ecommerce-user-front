@@ -7,9 +7,9 @@ const LoginView = () => {
       <div className='max-w-md w-full p-5 rounded-lg shadow-md'>
         <div className='flex justify-center mb-5'>
           <img
-            src='https://getlogovector.com/wp-content/uploads/2021/05/yours-clothing-logo-vector.png'
+            src='/public/assets/shop-logo.png'
             alt='Logo'
-            className='w-30 h-20'
+            className=' h-10'
           />
         </div>
         <h1 className='text-2xl font-semibold text-center text-gray-500 mb-6'>
