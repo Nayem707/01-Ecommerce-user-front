@@ -13,7 +13,11 @@ export default function NavStyle() {
       <header className='header sticky top-0 bg-white shadow-md flex items-center justify-between px-7 py-02'>
         <h1 className='w-3/11'>
           <Link to='/'>
-            <img src='/src/assets/shop-logo.png' alt='' className='h-10' />
+            <img
+              src='https://res.cloudinary.com/nayem490/image/upload/v1693437906/shop-logo_zlvemt.png'
+              alt=''
+              className='h-10'
+            />
           </Link>
         </h1>
 

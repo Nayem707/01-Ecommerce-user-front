@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 
 export default function CheckoutForm() {
   const { total } = useSelector((store) => store.cart);
+
   return (
     <div className='leading-loose'>
       <form className='max-w-xl m-4 p-5 bg-white rounded '>
@@ -17,7 +18,7 @@ export default function CheckoutForm() {
             id='cus_name'
             name='cus_name'
             type='text'
-            required=''
+            required='true'
             placeholder='Your Name'
             aria-label='Name'
           />
@@ -31,7 +32,7 @@ export default function CheckoutForm() {
             id='cus_email'
             name='cus_email'
             type='text'
-            required=''
+            required='true'
             placeholder='Your Email'
             aria-label='Email'
           />
@@ -45,7 +46,7 @@ export default function CheckoutForm() {
             id='cus_email'
             name='cus_email'
             type='text'
-            required=''
+            required='true'
             placeholder='Street'
             aria-label='Email'
           />

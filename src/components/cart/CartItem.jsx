@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
 import { decrease, increase, removeItem } from '../../features/Cart/CartSlice';
 import { useDispatch } from 'react-redux';
-import { toast } from 'react-toastify';
 
 const CartItem = ({ id, title, price, img, amount }) => {
   const dispatch = useDispatch();

@@ -15,6 +15,7 @@ const cartSlice = createSlice({
       const productToAdd = action.payload;
       state.cartItems.push(productToAdd);
       toast('Item Added!');
+      // console.log({ productToAdd });
       // localStorage.setItem('cart', JSON.stringify(state));
     },
     clearCart: (state) => {

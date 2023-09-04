@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { addToCart } from '../../features/Cart/CartSlice';
 // import { toast } from 'react-toastify';
 
 const Card2 = ({ item }) => {
+  const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+
+  const isInCart = cart.cartItems.find((cartItem) => cartItem.id === item.id);
 
   return (
     <>
@@ -25,15 +27,21 @@ const Card2 = ({ item }) => {
             </Link>
             <p className='text-center text-gray-800 mt-1'>${item.price}</p>
 
-            <button
-              onClick={() => {
-                dispatch(addToCart(item));
-                // toast('Item Added!');
-              }}
-              className='py-2 px-4  bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50 mt-4 w-full flex items-center justify-center'
-            >
-              Add to cart
-            </button>
+            {isInCart ? (
+              <button className='py-2 px-4  bg-blue-500 text-white rounded  mt-4 w-full flex items-center justify-center opacity-50 cursor-not-allowed'>
+                Item added
+              </button>
+            ) : (
+              <button
+                onClick={() => {
+                  dispatch(addToCart(item));
+                  // toast('Item Added!');
+                }}
+                className='py-2 px-4  bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50 mt-4 w-full flex items-center justify-center'
+              >
+                Add to cart
+              </button>
+            )}
           </div>
         </div>
       </section>

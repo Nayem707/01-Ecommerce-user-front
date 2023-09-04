@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 const FooterStyle = () => {
@@ -8,7 +7,7 @@ const FooterStyle = () => {
         <div className='flex justify-center text-teal-600 dark:text-teal-300'>
           <Link to='/'>
             <img
-              src='/src/assets/shop-logo.png'
+              src='https://res.cloudinary.com/nayem490/image/upload/v1693437906/shop-logo_zlvemt.png'
               alt=''
               className='h-10 rounded-full'
             />
