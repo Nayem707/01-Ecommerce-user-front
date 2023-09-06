@@ -12,7 +12,7 @@ import ErrorView from '../pages/error/ErrorView';
 import ProductsView from '../Pages/products/Products';
 import CartView from '../Pages/cart/CartView';
 import SettingView from '../pages/setting/SettingView';
-import ProductDetails from '../components/products/ProductDetails';
+import ProductDetails from '../Pages/products/ProductDetails';
 import PaymentView from '../Pages/payment/paymentView';
 
 export const router = createBrowserRouter(
@@ -26,7 +26,6 @@ export const router = createBrowserRouter(
       <Route path='/cart' element={<CartView />} />
       <Route path='/payment' element={<PaymentView />} />
       <Route path='/setting/user' element={<SettingView />} />
-
       <Route path='*' element={<ErrorView />} />
     </Route>
   )

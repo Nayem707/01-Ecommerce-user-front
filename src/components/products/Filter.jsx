@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 const Filter1 = () => {
   const [showFilters, setShowfilters] = useState(true);
+
   const [check, setCheck] = useState({
     leather: false,
     cotton: false,
