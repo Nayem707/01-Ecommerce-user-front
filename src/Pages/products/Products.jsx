@@ -6,10 +6,11 @@ import Card2 from '../../components/products/Card2';
 const ProductsView = () => {
   const { products, isLoading } = useSelector((store) => store.products);
   return (
-    <div className=' col-span-2 flex '>
+    <div className='col-span-2 flex '>
       <div className=' w-60 h-screen '>
         <Filter1 />
       </div>
+
       <div className='w-full pt-10 px-4 divide-y-2 divide-zinc-700'>
         <ProductsHeading />
 
