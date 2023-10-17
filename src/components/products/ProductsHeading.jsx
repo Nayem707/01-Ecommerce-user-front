@@ -2,8 +2,8 @@ import React from 'react';
 
 const PageHeading1 = () => {
   return (
-    <div className='px-10 text-3xl mb-5'>
-      <div className='  md:px-6 2xl:px-0 2xl:mx-auto 2xl:container flex justify-center items-center'>
+    <div className=''>
+      <div className='md:px-6 2xl:px-0 2xl:mx-auto 2xl:container flex justify-center items-center'>
         <div className='flex justify-between items-center w-full'>
           <div className='flex flex-col justify-start items-start'>
             <div className=' flex flex-row justify-end items-center space-x-3'>

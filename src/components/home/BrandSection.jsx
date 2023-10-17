@@ -4,8 +4,8 @@ const Brand = () => {
   return (
     <>
       {/* ====== Brands Section Start */}
-      <section className=' border p-5 mx-auto'>
-        <div className=' flex  justify-center items-center'>
+      <section className='border p-5 mx-auto'>
+        <div className='flex justify-center items-center'>
           <div className='flex flex-wrap -mx-4'>
             <div className='w-full px-10'>
               <div className='flex flex-wrap items-center justify-center'>
